@@ -1,0 +1,140 @@
+.landing-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 110vh;
+    background-image: url('/images/alpine-lake.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 60% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    clip-path: polygon(0% 100%, 100% 95%, 100% 0%, 0% 0%);
+}
+
+.landing {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 110vh;
+    min-height: 375px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.landing::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(220deg, rgba(168, 39, 205, 0.7) 35%, rgba(98, 60, 216, 0.7) 65%);
+}
+
+.title {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.title p {
+    top: 10px;
+    margin: 0;
+    padding: 0 15px;
+    font-family: 'True Lies', opentype;
+    font-size: 90px;
+    text-align: center;
+    line-height: 110%;
+    letter-spacing: 15px;
+}
+
+.title p::before,
+.title p::after {
+    position: absolute;
+    content: '';
+    bottom: calc(50% - 5px);
+    right: 100%;
+    width: 0;
+    height: 100%;
+    border: solid #fff;
+    border-width: 0 0 5px 0;
+    transition: all 0.6s;
+}
+
+.title p::after {
+    left: 100%;
+}
+
+.title p::before,
+.title p::after {
+    transition: all 1s;
+    width: calc(50vw - 250px);
+}
+
+.sub-title {
+    position: relative;
+    top: 20px;
+}
+
+.sub-title p {
+    margin: 30px;
+    padding: 8px 16px;
+    font-size: 18px;
+    font-weight: 200;
+    color: #fff;
+    background: rgba(98, 60, 216, 0.7);
+    border-radius: 20px;
+}
+
+.landing i {
+    position: relative;
+    top: 20px;
+    font-size: 32px;
+    color: #fff;
+    background: rgba(168, 39, 205, 0.7);
+    border-radius: 50%;
+}
+
+.landing i:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.landing > .picture-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 25px 50px;
+}
+
+@media (max-width: 768px) {
+    .title p {
+        top: 50px;
+        margin: 0;
+        padding: 0 15px;
+        font-family: 'True Lies', opentype;
+        font-size: 50px;
+        text-align: center;
+        line-height: 90%;
+        letter-spacing: 15px;
+    }
+}
+
+@media (max-width: 568px) {
+    .title {
+        left: 10px;
+    }
+
+    .title p::before,
+    .title p::after {
+        display: none;
+    }
+}

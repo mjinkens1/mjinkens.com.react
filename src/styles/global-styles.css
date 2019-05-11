@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Norwester';
+    src: url('/fonts/Norwester.woff') format('opentype');
+}
+
+@font-face {
+    font-family: 'True Lies';
+    src: url('/fonts/True Lies.woff') format('opentype');
+}
+
+@font-face {
+    font-family: 'Kollektif';
+    src: url('/fonts/Kollektif.woff') format('opentype');
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kollektif', opentype;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.container {
+    position: relative;
+    padding: 10px 10px 10px 0;
+    color: #0a0a1e;
+    font-size: 18px;
+}
+
+.container h1 {
+    position: relative;
+    margin: 25px 25px 25px auto;
+    padding: 15px 50px;
+    font-size: 60px;
+    font-family: 'Norwester', opentype;
+    text-align: right;
+    text-decoration: underline;
+    letter-spacing: 3px;
+}
+
+.container h2,
+.container h3 {
+    font-family: 'Norwester', opentype;
+    letter-spacing: 2px;
+}
+
+.no-js {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 110vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Norwester', opentype;
+    font-size: 45px;
+    transition: opacity 3s ease-out;
+    background: #fff;
+    overflow: hidden;
+}
+
+@media (max-width: 568px) {
+    .no-js {
+        background-size: 200% auto;
+        background-position: 30% bottom;
+    }
+}

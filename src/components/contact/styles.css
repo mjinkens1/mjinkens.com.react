@@ -1,0 +1,303 @@
+.contact {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 75px;
+    background-image: url('/images/stars-bg.svg');
+    background-repeat: repeat;
+    background-size: 600px 600px;
+    animation: bg 1000s linear infinite forwards;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 10000px 10000px;
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact h1 {
+    margin: 0;
+    font-family: 'Norwester', opentype;
+    font-size: 70px;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    background: #fff;
+}
+
+.contact h3 {
+    display: inline-block;
+    font-size: 45px;
+    margin: 0;
+    font-family: 'Norwester', opentype;
+    letter-spacing: 2px;
+    background: #fff;
+}
+
+.spock {
+    position: relative;
+    margin: 50px 50px 50px 0;
+    font-size: 330px;
+    color: #623cd8;
+    width: 100%;
+}
+
+.contact-label {
+    margin: 10px 0;
+    font-size: 22px;
+    background: #fff;
+}
+
+.contact-input {
+    width: 400px;
+    margin: 10px 0;
+    padding-left: 8px;
+    font-size: 20px;
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.contact-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+    color: red;
+}
+
+.contact-input[name='message'] {
+    height: 250px;
+    padding: 8px;
+    background: #fff;
+}
+
+.contact button {
+    margin: 20px 0;
+    font-size: 18px;
+    background: #623cd8;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.contact button:disabled {
+    opacity: 0.7;
+    cursor: auto;
+}
+
+.contact button:disabled:hover {
+    box-shadow: 0px 7px 38px 0px rgba(176, 171, 176, 1);
+    transform: none;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.contact a {
+    color: #623cd8;
+    font-size: 45px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.contact a:hover {
+    color: #1bfb9a;
+}
+
+.rect {
+    fill: none;
+}
+
+.stars {
+    fill: #623cd8;
+}
+
+.comets-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 150px);
+    height: 100%;
+}
+
+.comets {
+    fill: none;
+    stroke: #623cd8;
+    stroke-width: 1;
+    stroke-dasharray: 150 980;
+    stroke-dashoffset: 150;
+    animation: cometFall 10s ease-out infinite;
+}
+
+@keyframes glow {
+    6% {
+        opacity: 1;
+    }
+    12% {
+        opacity: 0.5;
+    }
+    18% {
+        opacity: 0.9;
+    }
+    24% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes cometFall {
+    from {
+        stroke-dashoffset: -(20);
+    }
+    to {
+        stroke-dashoffset: -(720);
+    }
+}
+
+.contact-popup-overlay {
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(220deg, rgba(168, 39, 205, 0.7) 35%, rgba(98, 60, 216, 0.7) 65%);
+}
+
+.contact-popup {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 60px);
+    max-width: 700px;
+    height: 350px;
+    margin: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 7px 38px 0px rgba(76, 71, 76, 1);
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+.contact-popup h1 {
+    position: relative;
+    z-index: 6;
+    text-decoration: none;
+    background: transparent;
+}
+
+.contact-popup p {
+    position: relative;
+    z-index: 6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-popup embed {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    margin: -15px;
+    height: auto;
+    pointer-events: none;
+}
+
+.popup-close {
+    position: absolute;
+    z-index: 7;
+    top: 0;
+    right: 0;
+    margin: 10px 20px;
+    color: #623cd8;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.contact button {
+    margin: 15px;
+    padding: 15px 50px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 40px;
+    box-shadow: 0px 7px 38px 0px rgba(176, 171, 176, 1);
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    color: #1bfb9a;
+    box-shadow: 0px 7px 38px 0px rgba(136, 131, 136, 1);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        width: 100%;
+    }
+
+    .contact-input {
+        width: calc(100% - 10px);
+    }
+
+    .contact-input[name='message'] {
+        width: calc(100% - 10px);
+    }
+
+    .spock {
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 568px) {
+    .content {
+        left: 0;
+        width: 100%;
+    }
+
+    .spock {
+        font-size: 70vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .project h3 {
+        white-space: normal;
+    }
+    .contact {
+        padding: 15px;
+    }
+}
+
+.no-opacity {
+    opacity: 0;
+    z-index: -10;
+}
+
+.hidden {
+    visibility: hidden;
+}
