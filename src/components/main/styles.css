@@ -1,0 +1,29 @@
+.content {
+    position: relative;
+    padding-left: 150px;
+    width: calc(100% - 150px);
+    margin: 0;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    margin: -15px 0 0 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@media (max-width: 568px) {
+    .content {
+        padding-left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 650px) {
+    .content {
+        padding-left: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,194 @@
+.projects {
+    position: relative;
+    margin: 0;
+    padding: 15px 0 3% 0;
+    background: linear-gradient(to bottom, #fff, rgb(240, 240, 250));
+}
+
+.projects::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5%;
+    background: #fff;
+    background-image: url('/images/stars-bg.svg');
+    background-repeat: repeat;
+    background-size: 600px 600px;
+    animation: bg 1000s linear infinite forwards;
+    clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.projects h1 {
+    text-align: left;
+}
+
+.project {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 80px 20px;
+    padding: 0 0 50px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+}
+
+.project:nth-child(odd) {
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+}
+
+.project-info {
+    position: relative;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 0 50%;
+    height: 100%;
+    margin: 0 15px;
+}
+
+.project-img {
+    position: relative;
+    width: 40%;
+    margin: 15px;
+    flex: 0.4 auto 40%;
+}
+
+.project img {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 7px 38px 0px rgba(176, 171, 176, 1);
+}
+
+.project .mobile-1 {
+    position: absolute;
+    right: 2%;
+    top: 28%;
+    width: 20%;
+    height: auto;
+    box-shadow: none;
+}
+
+.project .mobile-2 {
+    position: absolute;
+    right: 13%;
+    top: 50%;
+    width: 20%;
+    height: auto;
+    transform: rotate(270deg);
+    box-shadow: none;
+}
+
+.project .mobile-3 {
+    position: absolute;
+    left: 2%;
+    top: 28%;
+    width: 20%;
+    height: auto;
+    box-shadow: none;
+}
+
+.project h3 {
+    white-space: nowrap;
+}
+
+.project p {
+    position: relative;
+    z-index: 0;
+    font-size: 16px;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-p-show p {
+    height: auto;
+    margin: 1em 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+.project-button {
+    margin: 15px;
+    padding: 15px 50px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 40px;
+    box-shadow: 0px 7px 38px 0px rgba(176, 171, 176, 1);
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.project-button:hover {
+    box-shadow: 0px 7px 38px 0px rgba(136, 131, 136, 1);
+}
+
+.project-button-1 {
+    background: #1eacde;
+}
+
+.project-button-1:hover {
+    color: #623cd8;
+}
+
+.project-button-2 {
+    background: #623cd8;
+}
+
+.project-button-2:hover {
+    color: #1bfb9a;
+}
+
+@media (max-width: 1200px) {
+    .project-info,
+    .project-img {
+        width: 100%;
+        flex: auto;
+    }
+
+    .project {
+        padding: 0 15% 50px 15%;
+    }
+
+    .project .mobile-3 {
+        left: auto;
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        padding: 0;
+    }
+
+    .project-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .project h3 {
+        white-space: normal;
+    }
+}
+
+.translate0 {
+    opacity: 1;
+    transform: translate(0);
+}
