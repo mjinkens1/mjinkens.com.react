@@ -4,6 +4,24 @@ import './styles.css'
 
 const projects = [
   {
+    imageDesktop: '/images/7now-rn-web.png',
+    imageDesktopAlt: '7NOW',
+    imageMobile: '/images/7now-rn.png',
+    imageMobileAlt: '7NOW React Native',
+    linkAddress: 'https://itunes.apple.com/us/app/7now-food-alcohol-delivery/id1316244211?mt=8',
+    longDescription: (
+      <p>
+                The mobile app is built in React Native and uses Redux, Redux Sagas, and
+                Immutable.js for state management. I was responsible for the overall frontend
+                architecture, navigation implementation, onboarding flows, the location/7NOW Pins
+                functionality, as well as writing many of the resuable UI components.
+            </p>
+        ),
+    mobileImageLandscape: false,
+    shortDescription: "7-Eleven's delivery service.",
+    title: '7NOW Mobile App'
+  },
+  {
     imageDesktop: '/images/giving-clearly.png',
     imageDesktopAlt: 'giving clearly',
     imageMobile: '/images/giving-clearly-mobile.png',
@@ -17,7 +35,6 @@ const projects = [
             </p>
         ),
     mobileImageLandscape: false,
-    reverse: false,
     shortDescription: 'A React app for connecting people with charities to make giving easy',
     title: 'givingclearly.com (In Progress)'
   },
