@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import '../../styles/global-styles.css'
 import './styles.css'
 
-const MIN_LOADING_DISPLAY_TIME = 2500
+const MIN_LOADING_DISPLAY_TIME = 1500
 
 export class Loading extends PureComponent {
     state = {
