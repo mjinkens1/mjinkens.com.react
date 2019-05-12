@@ -154,6 +154,7 @@ export class Projects extends PureComponent {
                         imageDesktopAlt={imageDesktopAlt}
                         imageMobile={imageMobile}
                         imageMobileAlt={imageMobileAlt}
+                        key={index}
                         linkAddress={linkAddress}
                         longDescription={longDescription}
                         mobileImageLandscape={mobileImageLandscape}

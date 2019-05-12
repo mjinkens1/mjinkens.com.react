@@ -33,17 +33,21 @@ export const closePopup = () => {
 export const contactSubmit = formData => {
   return dispatch => {
     dispatch(submitForm(formData))
-    return fetch('http://mjinkens.com/send-message', {
+
+    return fetch('https://us-central1-mjinkens-95c8e.cloudfunctions.net/contact ', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: { 'Content-Type': 'application/json' }
     })
             .then(response => {
-              if (response.status !== 200) throw response.status
-
-              response.json()
+              if (response.status !== 200) {
+                throw response.status
+              }
+              return response
             })
-            .then(json => dispatch(submitSuccess(json)))
-            .catch(error => dispatch(submitFailure(error)))
+            .then(result => dispatch(submitSuccess(result)))
+            .catch(error => {
+              dispatch(submitFailure(error))
+            })
   }
 }

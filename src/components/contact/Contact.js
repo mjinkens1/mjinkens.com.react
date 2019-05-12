@@ -3,28 +3,35 @@ import { ContactPopup } from './ContactPopup'
 import ContactForm from './ContactForm'
 import './styles.css'
 
-export const Contact = props => {
+export const Contact = ({
+    closePopup,
+    didSubmit,
+    didRecieve,
+    contactSubmit,
+    formData,
+    formStatus,
+    showPopup
+}) => {
   return (
     <div className='contact'>
       <div className='comets-bg' />
       <ContactPopup
-        formData={props.formData}
-        formStatus={props.formStatus}
-        didSubmit={props.didSubmit}
-        didRecieve={props.didRecieve}
-        closePopup={props.closePopup}
-        showPopup={props.showPopup}
+        closePopup={closePopup}
+        didSubmit={didSubmit}
+        didRecieve={didRecieve}
+        formData={formData}
+        formStatus={formStatus}
+        showPopup={showPopup}
             />
       <div className='contact-container'>
         <div className='header-wrapper'>
           <h3>(FIRST)</h3>
           <h1>CONTACT</h1>
         </div>
-        {/* <i className='fas fa-hand-spock spock'></i> */}
         <embed className='spock' src='/images/hand-spock.svg' alt='spock' />
       </div>
       <div className='contact-container'>
-        <ContactForm onSubmit={props.handleSubmit} didRecieve={props.didRecieve} />
+        <ContactForm onSubmit={contactSubmit} didRecieve={didRecieve} />
         <div className='contact-links'>
           <a
             href='https://www.linkedin.com/in/matt-jinkens-391a8061'

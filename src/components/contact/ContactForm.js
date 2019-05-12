@@ -26,8 +26,7 @@ const formField = ({
     label,
     placeholder,
     type,
-    meta: { touched, error, warning, submitting },
-    className,
+    meta: { touched, error, warning },
     isTextArea
 }) =>
   <div>
