@@ -50,14 +50,6 @@ export const Contact = ({
             <i className='fab fa-twitter' />
           </a>
           <a
-            href='https://codepen.io/MJ87/'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='btn btn-lg social mx-1'
-                    >
-            <i className='fab fa-codepen' />
-          </a>
-          <a
             href='https://github.com/mjinkens1'
             target='_blank'
             rel='noopener noreferrer'
