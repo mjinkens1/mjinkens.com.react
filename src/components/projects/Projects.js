@@ -22,6 +22,22 @@ const projects = [
     title: '7NOW Mobile App'
   },
   {
+    imageDesktop: '/images/7now-web.png',
+    imageDesktopAlt: '7NOW',
+    imageMobile: '/images/7now-web-mobile.png',
+    imageMobileAlt: '7NOW web mobile',
+    linkAddress: 'https://delivery.7-eleven.com/home',
+    longDescription: (
+      <p>
+                The web app is built in React using the Material UI component library, and uses
+                Redux for state management.
+            </p>
+        ),
+    mobileImageLandscape: false,
+    shortDescription: "7-Eleven's delivery service.",
+    title: '7NOW Web App'
+  },
+  {
     imageDesktop: '/images/giving-clearly.png',
     imageDesktopAlt: 'giving clearly',
     imageMobile: '/images/giving-clearly-mobile.png',
