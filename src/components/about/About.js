@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { util } from '../../utils'
 import './styles.css'
 
 export class About extends PureComponent {
@@ -7,15 +8,18 @@ export class About extends PureComponent {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', () => {
-            const { hasEnteredView } = this.state
-            const about = document.querySelector('.about')
-            const aboutPos = about.getBoundingClientRect()
+        window.addEventListener(
+            'scroll',
+            util.throttle(() => {
+                const { hasEnteredView } = this.state
+                const about = document.querySelector('.about')
+                const aboutPos = about.getBoundingClientRect()
 
-            if (aboutPos.top <= window.innerHeight / 3 && !hasEnteredView) {
-                this.setState({ hasEnteredView: true })
-            }
-        })
+                if (aboutPos.top <= window.innerHeight / 3 && !hasEnteredView) {
+                    this.setState({ hasEnteredView: true })
+                }
+            })
+        )
     }
 
     componentWillUnmount() {

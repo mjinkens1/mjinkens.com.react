@@ -132,28 +132,31 @@ export class Sidebar extends PureComponent {
             this.setState({ sidebarItemIndex: 0 })
         }
 
-        window.addEventListener('scroll', () => {
-            const landingPos = landing.getBoundingClientRect()
-            const aboutPos = about.getBoundingClientRect()
-            const projectsPos = projects.getBoundingClientRect()
-            const contactPos = contact.getBoundingClientRect()
+        window.addEventListener(
+            'scroll',
+            util.throttle(() => {
+                const landingPos = landing.getBoundingClientRect()
+                const aboutPos = about.getBoundingClientRect()
+                const projectsPos = projects.getBoundingClientRect()
+                const contactPos = contact.getBoundingClientRect()
 
-            if (landingPos.top <= -window.innerHeight * 1.1) {
-                this.setState({ sidebarFixed: true })
-            } else {
-                this.setState({ sidebarFixed: false })
-            }
+                if (landingPos.top <= -window.innerHeight * 1.1) {
+                    this.setState({ sidebarFixed: true })
+                } else {
+                    this.setState({ sidebarFixed: false })
+                }
 
-            if (contactPos.top <= window.innerHeight / 3) {
-                this.setState({ sidebarItemIndex: 3 })
-            } else if (projectsPos.top <= window.innerHeight / 3) {
-                this.setState({ sidebarItemIndex: 2 })
-            } else if (aboutPos.top <= window.innerHeight / 3) {
-                this.setState({ sidebarItemIndex: 1 })
-            } else if (landingPos.top <= -window.innerHeight * 0.25) {
-                this.setState({ sidebarItemIndex: 0 })
-            }
-        })
+                if (contactPos.top <= window.innerHeight / 3) {
+                    this.setState({ sidebarItemIndex: 3 })
+                } else if (projectsPos.top <= window.innerHeight / 3) {
+                    this.setState({ sidebarItemIndex: 2 })
+                } else if (aboutPos.top <= window.innerHeight / 3) {
+                    this.setState({ sidebarItemIndex: 1 })
+                } else if (landingPos.top <= -window.innerHeight * 0.25) {
+                    this.setState({ sidebarItemIndex: 0 })
+                }
+            })
+        )
     }
 
     componentWillUnmount() {

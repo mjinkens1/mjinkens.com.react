@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { util } from '../../utils'
 import './styles.css'
 
 export class Project extends PureComponent {
@@ -24,13 +25,16 @@ export class Project extends PureComponent {
         const { visible } = this.state
         const el = document.querySelector(`#project-${index}`)
 
-        window.addEventListener('scroll', () => {
-            const pos = el.getBoundingClientRect()
+        window.addEventListener(
+            'scroll',
+            util.throttle(() => {
+                const pos = el.getBoundingClientRect()
 
-            if (pos.top <= window.innerHeight / 1.25 && !visible) {
-                this.setState({ visible: true })
-            }
-        })
+                if (pos.top <= window.innerHeight / 1.25 && !visible) {
+                    this.setState({ visible: true })
+                }
+            })
+        )
     }
 
     componentWillUnmount() {

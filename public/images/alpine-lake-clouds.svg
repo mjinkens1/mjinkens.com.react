@@ -50,13 +50,6 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   </cc:Work>
 </rdf:RDF>
 </metadata>
-<!-- <script type="text/javascript">
-  //<![CDATA[
-  console.log(test)
-  var path4 = document.getElementById('#path4')
-  path4.setAttribute("stroke", "red")
-  //]]>
-</script> -->
 <style>
 
   .lightning {
