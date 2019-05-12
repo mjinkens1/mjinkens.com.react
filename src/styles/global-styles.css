@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Norwester';
-    src: url('/fonts/Norwester.woff') format('opentype');
+    src: url('../fonts/Norwester.woff') format('opentype');
 }
 
 @font-face {
     font-family: 'True Lies';
-    src: url('/fonts/True Lies.woff') format('opentype');
+    src: url('../fonts/True Lies.woff') format('opentype');
 }
 
 @font-face {
     font-family: 'Kollektif';
-    src: url('/fonts/Kollektif.woff') format('opentype');
+    src: url('../fonts/Kollektif.woff') format('opentype');
 }
 
 html,
