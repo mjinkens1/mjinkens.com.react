@@ -26,7 +26,7 @@ const projects = [
     imageDesktopAlt: 'photos site',
     imageMobile: '/images/photos-mobile.png',
     imageMobileAlt: 'photos site mobile',
-    linkAddress: 'http://mjinkens.com/photos',
+    linkAddress: null, // 'http://mjinkens.com/photos',
     longDescription: (
       <p>
                 This app was built using the MERN stack - MongoDB, Express, React, and Node.js and
