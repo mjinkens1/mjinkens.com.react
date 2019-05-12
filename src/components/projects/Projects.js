@@ -118,7 +118,7 @@ const projects = [
     longDescription: (
       <p>
                 This app was built using React, and uses Redux for state management. The app uses
-                Express and Node.js on the back end and is hosted on AWS.
+                Firebase cloud functions and is hosted on Firebase, with Travis CI.
             </p>
         ),
     mobileImageLandscape: false,
