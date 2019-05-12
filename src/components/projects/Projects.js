@@ -36,7 +36,7 @@ const projects = [
         ),
     mobileImageLandscape: true,
     shortDescription: 'A photo sharing app built in React for travel and adventure photos',
-    title: 'Photo Sharing'
+    title: 'Photo Sharing - Update in Progress'
   },
   {
     imageDesktop: '/images/class-site.png',
