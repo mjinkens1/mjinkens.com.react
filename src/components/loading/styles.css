@@ -77,7 +77,12 @@
 
 @media (max-width: 568px) {
     .loading {
-        background-size: 200% auto;
-        background-position: 30% bottom;
+        /* background-size: 200% auto;
+        background-position: 30% bottom; */
+    }
+
+    .loading::before {
+        background: white; /* url('/images/alpine-lake.svg');*/
+        background-attachment: local;
     }
 }
