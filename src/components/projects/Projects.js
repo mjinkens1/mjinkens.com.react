@@ -18,7 +18,7 @@ const projects = [
             </p>
         ),
     mobileImageLandscape: false,
-    shortDescription: "7-Eleven's delivery service.",
+    shortDescription: "7-Eleven's delivery service for mobile.",
     title: '7NOW Mobile App'
   },
   {
@@ -34,7 +34,7 @@ const projects = [
             </p>
         ),
     mobileImageLandscape: false,
-    shortDescription: "7-Eleven's delivery service.",
+    shortDescription: "7-Eleven's delivery service for the web.",
     title: '7NOW Web App'
   },
   {
