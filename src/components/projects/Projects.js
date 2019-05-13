@@ -38,23 +38,6 @@ const projects = [
     title: '7NOW Web App'
   },
   {
-    imageDesktop: '/images/giving-clearly.png',
-    imageDesktopAlt: 'giving clearly',
-    imageMobile: '/images/giving-clearly-mobile.png',
-    imageMobileAlt: 'giving clearly mobile',
-    linkAddress: null,
-    longDescription: (
-      <p>
-                This app is built in React and uses Redux for state management. In addition to the
-                overall layout and page design, the site logos were designed and created by me using
-                Inkscape.
-            </p>
-        ),
-    mobileImageLandscape: false,
-    shortDescription: 'A React app for connecting people with charities to make giving easy',
-    title: 'givingclearly.com (In Progress)'
-  },
-  {
     imageDesktop: '/images/photo-blog.png',
     imageDesktopAlt: 'photos site',
     imageMobile: '/images/photos-mobile.png',
@@ -70,6 +53,23 @@ const projects = [
     mobileImageLandscape: true,
     shortDescription: 'A photo sharing app built in React for travel and adventure photos',
     title: 'Photo Sharing - Update in Progress'
+  },
+  {
+    imageDesktop: '/images/giving-clearly.png',
+    imageDesktopAlt: 'giving clearly',
+    imageMobile: '/images/giving-clearly-mobile.png',
+    imageMobileAlt: 'giving clearly mobile',
+    linkAddress: null,
+    longDescription: (
+      <p>
+                This app is built in React and uses Redux for state management. In addition to the
+                overall layout and page design, the site logos were designed and created by me using
+                Inkscape.
+            </p>
+        ),
+    mobileImageLandscape: false,
+    shortDescription: 'A React app for connecting people with charities to make giving easy',
+    title: 'givingclearly.com (In Progress)'
   },
   {
     imageDesktop: '/images/class-site.png',
