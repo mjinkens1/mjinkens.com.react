@@ -13,8 +13,8 @@ const projects = [
       <p>
                 The mobile app is built in React Native and uses Redux, Redux Sagas, and
                 Immutable.js for state management. I was responsible for the overall frontend
-                architecture, navigation implementation, onboarding flows, the location/7NOW Pins
-                functionality, as well as writing many of the resuable UI components.
+                architecture, navigation implementation, onboarding flows, and the location/7NOW
+                Pins functionality, as well as writing many of the resuable UI components.
             </p>
         ),
     mobileImageLandscape: false,
