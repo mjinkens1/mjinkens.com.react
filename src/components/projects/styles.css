@@ -164,7 +164,10 @@
     .projects {
         display: flex;
         flex-direction: column;
+<<<<<<< HEAD
         padding-bottom: 80px;
+=======
+>>>>>>> 83abee174bd92bf43840b15def18fff6a4656836
     }
 
     .project-info,
