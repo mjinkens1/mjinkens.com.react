@@ -118,7 +118,7 @@
     padding: 20px 25px 25px 25px;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 650px) {
     .sidebar {
         display: none;
     }
