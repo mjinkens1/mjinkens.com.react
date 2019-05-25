@@ -62,6 +62,15 @@ export class Project extends PureComponent {
                           <h3>
                               {title}
                           </h3>
+                          <div className="project-img project-img-small-screen">
+                              <img src={imageDesktop} alt={imageDesktopAlt} />
+                              {imageMobile &&
+                                  <img
+                                      className={`mobile ${this._getMobilePhotoOrientation(false)}`}
+                                      src={imageMobile}
+                                      alt={imageMobileAlt}
+                                  />}
+                          </div>
                           <h4>
                               {shortDescription}
                           </h4>
@@ -85,7 +94,7 @@ export class Project extends PureComponent {
                               </a>}
                       </div>
                   </div>
-                  <div className="project-img">
+                  <div className="project-img project-img-large-screen">
                       <img src={imageDesktop} alt={imageDesktopAlt} />
                       {imageMobile &&
                           <img
@@ -96,7 +105,7 @@ export class Project extends PureComponent {
                   </div>
               </div>
             : <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
-                  <div className="project-img">
+                  <div className="project-img project-img-large-screen">
                       <img src={imageDesktop} alt={imageDesktopAlt} />
                       {imageMobile &&
                           <img
@@ -110,6 +119,15 @@ export class Project extends PureComponent {
                           <h3>
                               {title}
                           </h3>
+                          <div className="project-img project-img-small-screen">
+                              <img src={imageDesktop} alt={imageDesktopAlt} />
+                              {imageMobile &&
+                                  <img
+                                      className={`mobile ${this._getMobilePhotoOrientation(false)}`}
+                                      src={imageMobile}
+                                      alt={imageMobileAlt}
+                                  />}
+                          </div>
                           <h4>
                               {shortDescription}
                           </h4>
