@@ -92,14 +92,14 @@
     box-shadow: none;
 }
 
-.project .mobile-3 {
+/* .project .mobile-3 {
     position: absolute;
     left: 2%;
     top: 28%;
     width: 20%;
     height: auto;
     box-shadow: none;
-}
+} */
 
 .project h3 {
     white-space: nowrap;

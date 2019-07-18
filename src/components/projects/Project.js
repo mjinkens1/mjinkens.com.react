@@ -11,11 +11,7 @@ export class Project extends PureComponent {
     _getMobilePhotoOrientation = reverse => {
         const { mobileImageLandscape } = this.props
 
-        if (reverse) {
-            return mobileImageLandscape ? 'mobile-2' : 'mobile-3'
-        } else {
-            return mobileImageLandscape ? 'mobile-2' : 'mobile-1'
-        }
+        return mobileImageLandscape ? 'mobile-2' : 'mobile-1'
     }
 
     _onInfoButtonClick = () => this.setState(({ showInfo }) => ({ showInfo: !showInfo }))
@@ -55,102 +51,102 @@ export class Project extends PureComponent {
         } = this.props
         const { showInfo, visible } = this.state
 
-        return index % 2 === 0
-            ? <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
-                  <div className={showInfo ? 'project-info project-p-show' : 'project-info'}>
-                      <div>
-                          <h3>
-                              {title}
-                          </h3>
-                          <div className="project-img project-img-small-screen">
-                              <img src={imageDesktop} alt={imageDesktopAlt} />
-                              {imageMobile &&
-                                  <img
-                                      className={`mobile ${this._getMobilePhotoOrientation(false)}`}
-                                      src={imageMobile}
-                                      alt={imageMobileAlt}
-                                  />}
-                          </div>
-                          <h4>
-                              {shortDescription}
-                          </h4>
-                          {longDescription}
-                      </div>
-                      <div className="project-buttons">
-                          <div
-                              className="project-button project-button-1"
-                              onClick={this._onInfoButtonClick}
-                          >
-                              {showInfo ? 'Less Info' : 'More Info'}
-                          </div>
-                          {linkAddress &&
-                              <a
-                                  href={linkAddress}
-                                  className="project-button project-button-2"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                              >
-                                  View Page
-                              </a>}
-                      </div>
-                  </div>
-                  <div className="project-img project-img-large-screen">
-                      <img src={imageDesktop} alt={imageDesktopAlt} />
-                      {imageMobile &&
-                          <img
-                              className={`mobile ${this._getMobilePhotoOrientation(true)}`}
-                              src={imageMobile}
-                              alt={imageMobileAlt}
-                          />}
-                  </div>
-              </div>
-            : <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
-                  <div className="project-img project-img-large-screen">
-                      <img src={imageDesktop} alt={imageDesktopAlt} />
-                      {imageMobile &&
-                          <img
-                              className={`mobile ${this._getMobilePhotoOrientation(false)}`}
-                              src={imageMobile}
-                              alt={imageMobileAlt}
-                          />}
-                  </div>
-                  <div className={showInfo ? 'project-info project-p-show' : 'project-info'}>
-                      <div>
-                          <h3>
-                              {title}
-                          </h3>
-                          <div className="project-img project-img-small-screen">
-                              <img src={imageDesktop} alt={imageDesktopAlt} />
-                              {imageMobile &&
-                                  <img
-                                      className={`mobile ${this._getMobilePhotoOrientation(false)}`}
-                                      src={imageMobile}
-                                      alt={imageMobileAlt}
-                                  />}
-                          </div>
-                          <h4>
-                              {shortDescription}
-                          </h4>
-                          {longDescription}
-                      </div>
-                      <div className="project-buttons">
-                          <div
-                              className="project-button project-button-1"
-                              onClick={this._onInfoButtonClick}
-                          >
-                              {showInfo ? 'Less Info' : 'More Info'}
-                          </div>
-                          {linkAddress &&
-                              <a
-                                  href={linkAddress}
-                                  className="project-button project-button-2"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                              >
-                                  View Page
-                              </a>}
-                      </div>
-                  </div>
-              </div>
+        return index % 2 === 0 ? (
+            <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
+                <div className={showInfo ? 'project-info project-p-show' : 'project-info'}>
+                    <div>
+                        <h3>{title}</h3>
+                        <div className="project-img project-img-small-screen">
+                            <img src={imageDesktop} alt={imageDesktopAlt} />
+                            {imageMobile && (
+                                <img
+                                    className={`mobile ${this._getMobilePhotoOrientation(false)}`}
+                                    src={imageMobile}
+                                    alt={imageMobileAlt}
+                                />
+                            )}
+                        </div>
+                        <h4>{shortDescription}</h4>
+                        {longDescription}
+                    </div>
+                    <div className="project-buttons">
+                        <div
+                            className="project-button project-button-1"
+                            onClick={this._onInfoButtonClick}
+                        >
+                            {showInfo ? 'Less Info' : 'More Info'}
+                        </div>
+                        {linkAddress && (
+                            <a
+                                href={linkAddress}
+                                className="project-button project-button-2"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Page
+                            </a>
+                        )}
+                    </div>
+                </div>
+                <div className="project-img project-img-large-screen">
+                    <img src={imageDesktop} alt={imageDesktopAlt} />
+                    {imageMobile && (
+                        <img
+                            className={`mobile ${this._getMobilePhotoOrientation(true)}`}
+                            src={imageMobile}
+                            alt={imageMobileAlt}
+                        />
+                    )}
+                </div>
+            </div>
+        ) : (
+            <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
+                <div className="project-img project-img-large-screen">
+                    <img src={imageDesktop} alt={imageDesktopAlt} />
+                    {imageMobile && (
+                        <img
+                            className={`mobile ${this._getMobilePhotoOrientation(false)}`}
+                            src={imageMobile}
+                            alt={imageMobileAlt}
+                        />
+                    )}
+                </div>
+                <div className={showInfo ? 'project-info project-p-show' : 'project-info'}>
+                    <div>
+                        <h3>{title}</h3>
+                        <div className="project-img project-img-small-screen">
+                            <img src={imageDesktop} alt={imageDesktopAlt} />
+                            {imageMobile && (
+                                <img
+                                    className={`mobile ${this._getMobilePhotoOrientation(false)}`}
+                                    src={imageMobile}
+                                    alt={imageMobileAlt}
+                                />
+                            )}
+                        </div>
+                        <h4>{shortDescription}</h4>
+                        {longDescription}
+                    </div>
+                    <div className="project-buttons">
+                        <div
+                            className="project-button project-button-1"
+                            onClick={this._onInfoButtonClick}
+                        >
+                            {showInfo ? 'Less Info' : 'More Info'}
+                        </div>
+                        {linkAddress && (
+                            <a
+                                href={linkAddress}
+                                className="project-button project-button-2"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View Page
+                            </a>
+                        )}
+                    </div>
+                </div>
+            </div>
+        )
     }
 }
