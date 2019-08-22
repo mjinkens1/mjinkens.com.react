@@ -45,13 +45,41 @@ const projects = [
         linkAddress: 'https://www.datacloud.com/',
         longDescription: (
             <p>
-                This page was built using Webflow, allowing for the development of a clean modern
+                This page was built using Webflow, allowing for the development of a clean, modern
                 web application that can be updated as needed by the client.
             </p>
         ),
         mobileImageLandscape: false,
         shortDescription: 'A marketing website built in Webflow',
         title: 'DataCloud Marketing Page',
+    },
+    {
+        imageDesktop: '/images/class-site.png',
+        imageDesktopAlt: 'djinkens.org',
+        imageMobile: '/images/class-site-mobile.png',
+        imageMobileAlt: 'djinkens.org mobile',
+        linkAddress: 'https://djinkens.org',
+        longDescription: (
+            <Fragment>
+                <p>
+                    This app was built using React, Redux, and Redux Sagas, and is hosted on Hosted
+                    on Google Firebase. The app provides a secure login to allow authorized users
+                    the ability to manage the app&#39;s content including files, announcements,
+                    assignments, and calendar items. On the backend, content and data is managed
+                    using Firebase's Cloud Functions, Firestore database, and storage buckets.
+                </p>
+                <p>
+                    All text-based content features a WYSIWYG editor allowing custom formatting, and
+                    embedded images and video. The app also features a daily news video from CNN10,
+                    which is accessed through the CNN.com RSS feed and embedded into the page.
+                </p>
+            </Fragment>
+        ),
+        mobileImageLandscape: false,
+        reverse: false,
+        shortDescription:
+            'A homepage for students to keep up to date with course materials and important events',
+        title: 'djinkens.org',
     },
     {
         imageDesktop: '/images/photo-blog.png',
@@ -86,33 +114,6 @@ const projects = [
         mobileImageLandscape: false,
         shortDescription: 'A React app for connecting people with charities to make giving easy',
         title: 'givingclearly.com (In Progress)',
-    },
-    {
-        imageDesktop: '/images/class-site.png',
-        imageDesktopAlt: 'class site',
-        imageMobile: '/images/class-site-mobile.png',
-        imageMobileAlt: 'class site mobile',
-        linkAddress: 'http://djinkens.com/apwh',
-        longDescription: (
-            <Fragment>
-                <p>
-                    This app was built using Bootstrap, jQuery, Node.js, Express, and MongoDB, and
-                    is hosted on AWS. The app provides a secure login to allow authorized users the
-                    ability to manage the app&#39;s content including files, announcements,
-                    assignments, and calendar items.
-                </p>
-                <p>
-                    All text-based content features a WYSIWYG editor allowing custom formatting, and
-                    embedded images and video. The app also features a daily news video from CNN10,
-                    which is accessed through the CNN.com RSS feed and embedded into the page.
-                </p>
-            </Fragment>
-        ),
-        mobileImageLandscape: false,
-        reverse: false,
-        shortDescription:
-            'A homepage for students to keep up to date with course materials and important events',
-        title: 'Class Homepage',
     },
     {
         imageDesktop: '/images/crypto.png',
