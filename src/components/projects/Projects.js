@@ -35,23 +35,46 @@ const projects = [
         ),
         mobileImageLandscape: false,
         shortDescription: "7-Eleven's delivery service for the web.",
-        title: '7NOW Web App',
+        title: 'delivery.7-eleven.com',
     },
     {
-        imageDesktop: '/images/data-cloud.png',
-        imageDesktopAlt: 'DataCloud',
-        imageMobile: '/images/data-cloud-mobile.png',
-        imageMobileAlt: 'DataCloud Mobile',
-        linkAddress: 'https://www.datacloud.com/',
+        imageDesktop: '/images/mmspackers.png',
+        imageDesktopAlt: 'M&Ms Packers',
+        imageMobile: '/images/mmspackers-mobile.png',
+        imageMobileAlt: 'M&Ms Packers Mobile',
+        linkAddress: 'https://mmspackers.com',
         longDescription: (
             <p>
-                This page was built using Webflow, allowing for the development of a clean, modern
-                web application that can be updated as needed by the client.
+                This page was built with React and consists of several microsites that users access
+                by scanning a QR code on M&Ms packages. I was responsible for the frontend
+                architecture and implementation. The page features a photo stickers implementation
+                using my react-transformable-draggable library. Purchase is required for full access
+                to the site.
             </p>
         ),
         mobileImageLandscape: false,
-        shortDescription: 'A marketing website built in Webflow',
-        title: 'DataCloud Marketing Page',
+        shortDescription: 'Promotional site for M&Ms and the Green Bay Packers',
+        title: 'mmspackers.com',
+    },
+    {
+        imageDesktop: '/images/rtd.gif',
+        imageDesktopAlt: 'React Transformable Draggable',
+        imageMobile: null,
+        imageMobileAlt: null,
+        linkAddress: 'https://github.com/mjinkens1/react-transformable-draggable',
+        longDescription: (
+            <p>
+                I wrote this package to support the photo stickers implementation for
+                mmspackers.com. It provides a set of React components that wrap any child
+                component/element to make it draggable and dropable, as well as providing handles
+                for rotating and resizing
+            </p>
+        ),
+        mobileImageLandscape: false,
+        shortDescription:
+            'An open source library consisting of a set of React components to make any component/element draggable, droppable, and transformable by the user.',
+        title: 'react-transformable-draggable',
+        video: '/videos/rtd-video.mov',
     },
     {
         imageDesktop: '/images/class-site.png',
@@ -62,9 +85,9 @@ const projects = [
         longDescription: (
             <Fragment>
                 <p>
-                    This app was built using React, Redux, and Redux Sagas, and is hosted on Hosted
-                    on Google Firebase. The app provides a secure login to allow authorized users
-                    the ability to manage the app&#39;s content including files, announcements,
+                    This app was built using React, Redux, and Redux Sagas, and is hosted on
+                    Google's Firebase. The app provides a secure login to allow authorized users the
+                    ability to manage the app&#39;s content including files, announcements,
                     assignments, and calendar items. On the backend, content and data is managed
                     using Firebase's Cloud Functions, Firestore database, and storage buckets.
                 </p>
@@ -82,39 +105,74 @@ const projects = [
         title: 'djinkens.org',
     },
     {
-        imageDesktop: '/images/photo-blog.png',
-        imageDesktopAlt: 'photos site',
-        imageMobile: '/images/photos-mobile.png',
-        imageMobileAlt: 'photos site mobile',
-        linkAddress: null, // 'http://mjinkens.com/photos',
+        imageDesktop: '/images/rncl.png',
+        imageDesktopAlt: 'React Native Circle List',
+        imageMobile: null,
+        imageMobileAlt: null,
+        linkAddress: 'https://github.com/mjinkens1/react-native-circle-list',
         longDescription: (
             <p>
-                This app was built using the MERN stack - MongoDB, Express, React, and Node.js and
-                is hosted on AWS. The app dynamically builds the menu components based on database
-                content, and shows the photo location on an embedded Google Maps instance.
-            </p>
-        ),
-        mobileImageLandscape: true,
-        shortDescription: 'A photo sharing app built in React for travel and adventure photos',
-        title: 'Photo Sharing - Update in Progress',
-    },
-    {
-        imageDesktop: '/images/giving-clearly.png',
-        imageDesktopAlt: 'giving clearly',
-        imageMobile: '/images/giving-clearly-mobile.png',
-        imageMobileAlt: 'giving clearly mobile',
-        linkAddress: null,
-        longDescription: (
-            <p>
-                This app is built in React and uses Redux for state management. In addition to the
-                overall layout and page design, the site logos were designed and created by me using
-                Inkscape.
+                An open source library that consists of a React Native component that renders a list
+                of items into an infinite circular list. The list dynamically inserts list items
+                into the circle so large numbers of list items appear in a circle of a given size,
+                with infinite looping over list items.
             </p>
         ),
         mobileImageLandscape: false,
-        shortDescription: 'A React app for connecting people with charities to make giving easy',
-        title: 'givingclearly.com (In Progress)',
+        shortDescription: 'A React Native component to render a list of items in a circular list',
+        title: 'react-native-circle-list',
     },
+    {
+        imageDesktop: '/images/data-cloud.png',
+        imageDesktopAlt: 'DataCloud',
+        imageMobile: '/images/data-cloud-mobile.png',
+        imageMobileAlt: 'DataCloud Mobile',
+        linkAddress: 'https://www.datacloud.com/',
+        longDescription: (
+            <p>
+                This page was built using Webflow, allowing for the development of a clean, modern
+                web application that can be updated as needed by the client.
+            </p>
+        ),
+        mobileImageLandscape: false,
+        shortDescription: 'A marketing website for DataCloud',
+        title: 'datacloud.com',
+    },
+
+    // {
+    //     imageDesktop: '/images/photo-blog.png',
+    //     imageDesktopAlt: 'photos site',
+    //     imageMobile: '/images/photos-mobile.png',
+    //     imageMobileAlt: 'photos site mobile',
+    //     linkAddress: null, // 'http://mjinkens.com/photos',
+    //     longDescription: (
+    //         <p>
+    //             This app was built using the MERN stack - MongoDB, Express, React, and Node.js and
+    //             is hosted on AWS. The app dynamically builds the menu components based on database
+    //             content, and shows the photo location on an embedded Google Maps instance.
+    //         </p>
+    //     ),
+    //     mobileImageLandscape: true,
+    //     shortDescription: 'A photo sharing app built in React for travel and adventure photos',
+    //     title: 'Photo Sharing - Update in Progress',
+    // },
+    // {
+    //     imageDesktop: '/images/giving-clearly.png',
+    //     imageDesktopAlt: 'giving clearly',
+    //     imageMobile: '/images/giving-clearly-mobile.png',
+    //     imageMobileAlt: 'giving clearly mobile',
+    //     linkAddress: null,
+    //     longDescription: (
+    //         <p>
+    //             This app is built in React and uses Redux for state management. In addition to the
+    //             overall layout and page design, the site logos were designed and created by me using
+    //             Inkscape.
+    //         </p>
+    //     ),
+    //     mobileImageLandscape: false,
+    //     shortDescription: 'A React app for connecting people with charities to make giving easy',
+    //     title: 'givingclearly.com (In Progress)',
+    // },
     {
         imageDesktop: '/images/crypto.png',
         imageDesktopAlt: 'crypto',
@@ -195,6 +253,7 @@ export class Projects extends PureComponent {
                             mobileImageLandscape,
                             shortDescription,
                             title,
+                            video,
                         },
                         index
                     ) => (
@@ -210,6 +269,7 @@ export class Projects extends PureComponent {
                             mobileImageLandscape={mobileImageLandscape}
                             shortDescription={shortDescription}
                             title={title}
+                            video={video}
                         />
                     )
                 )}

@@ -48,8 +48,11 @@ export class Project extends PureComponent {
             longDescription,
             shortDescription,
             title,
+            video,
         } = this.props
         const { showInfo, visible } = this.state
+
+        console.log('VIDEO', video)
 
         return index % 2 === 0 ? (
             <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
@@ -57,7 +60,18 @@ export class Project extends PureComponent {
                     <div>
                         <h3>{title}</h3>
                         <div className="project-img project-img-small-screen">
-                            <img src={imageDesktop} alt={imageDesktopAlt} />
+                            {video ? (
+                                <video
+                                    className="video"
+                                    src={video}
+                                    controls={false}
+                                    autoPlay
+                                    muted
+                                    loop
+                                />
+                            ) : (
+                                <img src={imageDesktop} alt={imageDesktopAlt} />
+                            )}
                             {imageMobile && (
                                 <img
                                     className={`mobile ${this._getMobilePhotoOrientation(false)}`}
@@ -89,7 +103,11 @@ export class Project extends PureComponent {
                     </div>
                 </div>
                 <div className="project-img project-img-large-screen">
-                    <img src={imageDesktop} alt={imageDesktopAlt} />
+                    {video ? (
+                        <video className="video" src={video} controls={false} autoPlay muted loop />
+                    ) : (
+                        <img src={imageDesktop} alt={imageDesktopAlt} />
+                    )}
                     {imageMobile && (
                         <img
                             className={`mobile ${this._getMobilePhotoOrientation(true)}`}
@@ -102,7 +120,11 @@ export class Project extends PureComponent {
         ) : (
             <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
                 <div className="project-img project-img-large-screen">
-                    <img src={imageDesktop} alt={imageDesktopAlt} />
+                    {video ? (
+                        <video className="video" src={video} controls={false} autoPlay muted loop />
+                    ) : (
+                        <img src={imageDesktop} alt={imageDesktopAlt} />
+                    )}
                     {imageMobile && (
                         <img
                             className={`mobile ${this._getMobilePhotoOrientation(false)}`}
@@ -115,7 +137,18 @@ export class Project extends PureComponent {
                     <div>
                         <h3>{title}</h3>
                         <div className="project-img project-img-small-screen">
-                            <img src={imageDesktop} alt={imageDesktopAlt} />
+                            {video ? (
+                                <video
+                                    className="video"
+                                    src={video}
+                                    controls={false}
+                                    autoPlay
+                                    muted
+                                    loop
+                                />
+                            ) : (
+                                <img src={imageDesktop} alt={imageDesktopAlt} />
+                            )}
                             {imageMobile && (
                                 <img
                                     className={`mobile ${this._getMobilePhotoOrientation(false)}`}
