@@ -47,8 +47,8 @@ const projects = [
             <p>
                 This page was built with React and consists of several microsites that users access
                 by scanning a QR code on M&Ms packages. I was responsible for the frontend
-                architecture and implementation. The page features a photo stickers implementation
-                using my react-transformable-draggable library. Purchase is required for full access
+                architecture and implementation. The page features a Packers trivia mini-game, and a photo stickers implementation
+                based on my react-transformable-draggable library. Purchase is required for full access
                 to the site.
             </p>
         ),
