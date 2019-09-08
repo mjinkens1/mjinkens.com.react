@@ -47,9 +47,9 @@ const projects = [
             <p>
                 This page was built with React and consists of several microsites that users access
                 by scanning a QR code on M&Ms packages. I was responsible for the frontend
-                architecture and implementation. The page features a Packers trivia mini-game, and a photo stickers implementation
-                based on my react-transformable-draggable library. Purchase is required for full access
-                to the site.
+                architecture and implementation. The page features a Packers trivia mini-game, and a
+                photo stickers implementation based on my react-transformable-draggable library.
+                Purchase is required for full access to the site.
             </p>
         ),
         mobileImageLandscape: false,
@@ -66,7 +66,7 @@ const projects = [
             <p>
                 I wrote this package to support the photo stickers implementation for
                 mmspackers.com. It provides a set of React components that wrap any child
-                component/element to make it draggable and dropable, as well as providing handles
+                component/element to make it draggable and droppable, as well as providing handles
                 for rotating and resizing
             </p>
         ),
