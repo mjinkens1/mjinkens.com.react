@@ -122,22 +122,22 @@ const projects = [
         shortDescription: 'A React Native component to render a list of items in a circular list',
         title: 'react-native-circle-list',
     },
-    {
-        imageDesktop: '/images/data-cloud.png',
-        imageDesktopAlt: 'DataCloud',
-        imageMobile: '/images/data-cloud-mobile.png',
-        imageMobileAlt: 'DataCloud Mobile',
-        linkAddress: 'https://www.datacloud.com/',
-        longDescription: (
-            <p>
-                This page was built using Webflow, allowing for the development of a clean, modern
-                web application that can be updated as needed by the client.
-            </p>
-        ),
-        mobileImageLandscape: false,
-        shortDescription: 'A marketing website for DataCloud',
-        title: 'datacloud.com',
-    },
+    // {
+    //     imageDesktop: '/images/data-cloud.png',
+    //     imageDesktopAlt: 'DataCloud',
+    //     imageMobile: '/images/data-cloud-mobile.png',
+    //     imageMobileAlt: 'DataCloud Mobile',
+    //     linkAddress: 'https://www.datacloud.com/',
+    //     longDescription: (
+    //         <p>
+    //             This page was built using Webflow, allowing for the development of a clean, modern
+    //             web application that can be updated as needed by the client.
+    //         </p>
+    //     ),
+    //     mobileImageLandscape: false,
+    //     shortDescription: 'A marketing website for DataCloud',
+    //     title: 'datacloud.com',
+    // },
 
     // {
     //     imageDesktop: '/images/photo-blog.png',
