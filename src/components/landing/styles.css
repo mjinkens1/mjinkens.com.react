@@ -56,29 +56,6 @@
     letter-spacing: 15px;
 }
 
-.title p::before,
-.title p::after {
-    position: absolute;
-    content: '';
-    bottom: calc(50% - 5px);
-    right: 100%;
-    width: 0;
-    height: 100%;
-    border: solid #fff;
-    border-width: 0 0 5px 0;
-    transition: all 0.6s;
-}
-
-.title p::after {
-    left: 100%;
-}
-
-.title p::before,
-.title p::after {
-    transition: all 1s;
-    width: calc(50vw - 250px);
-}
-
 .sub-title {
     position: relative;
     top: 20px;
