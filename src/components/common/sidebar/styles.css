@@ -11,7 +11,7 @@
     min-height: 600px;
     margin: 0;
     padding: 30px 25px 25px 25px;
-    background-image: url('/images/alpine-lake.jpg');
+    background-image: url('../../../images/alpine-lake.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: 60% 100%;

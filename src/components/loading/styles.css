@@ -25,7 +25,7 @@
     height: 1100vh;
     background: linear-gradient(220deg, rgba(168, 39, 205, 0.7) 35%, rgba(98, 60, 216, 0.7) 65%);
     background: #fff;
-    background: url('/images/alpine-lake.svg');
+    background: url('../../images/alpine-lake.svg');
     background-attachment: fixed;
     background-size: cover;
     background-position: 60% 100%;
@@ -76,13 +76,8 @@
 }
 
 @media (max-width: 568px) {
-    .loading {
-        /* background-size: 200% auto;
-        background-position: 30% bottom; */
-    }
-
     .loading::before {
-        background: white; /* url('/images/alpine-lake.svg');*/
+        background: white;
         background-attachment: local;
     }
 }

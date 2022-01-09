@@ -1,28 +1,28 @@
-import React, { PureComponent } from 'react'
-import '../../styles/global-styles.css'
-import './styles.css'
+import React, { PureComponent } from 'react';
+import '../../styles/global-styles.css';
+import './styles.css';
 
-const MIN_LOADING_DISPLAY_TIME = 1500
+const MIN_LOADING_DISPLAY_TIME = 500;
 
 export class Loading extends PureComponent {
     state = {
         minLoadTimeComplete: false,
         windowDidLoad: false,
-    }
+    };
 
-    _onWindowLoad = () => this.setState({ windowDidLoad: true })
+    _onWindowLoad = () => this.setState({ windowDidLoad: true });
 
     componentDidMount() {
-        setTimeout(() => this.setState({ minLoadTimeComplete: true }), MIN_LOADING_DISPLAY_TIME)
-        window.addEventListener('load', this._onWindowLoad)
+        setTimeout(() => this.setState({ minLoadTimeComplete: true }), MIN_LOADING_DISPLAY_TIME);
+        window.addEventListener('load', this._onWindowLoad);
     }
 
     componentWillUnmount() {
-        window.removeEventListener('onload')
+        window.removeEventListener('onload');
     }
 
     render() {
-        const { minLoadTimeComplete, windowDidLoad } = this.state
+        const { minLoadTimeComplete, windowDidLoad } = this.state;
 
         return (
             <div className={minLoadTimeComplete && windowDidLoad ? 'loading opacity0' : 'loading'}>
@@ -36,6 +36,6 @@ export class Loading extends PureComponent {
                     <p>Loading, Please Wait...</p>
                 </div>
             </div>
-        )
+        );
     }
 }

@@ -1,7 +1,7 @@
-import React, { Fragment, PureComponent } from 'react'
-import { SidebarItem } from './SidebarItem'
-import { util } from '../../../utils'
-import './styles.css'
+import React, { Fragment, PureComponent } from 'react';
+import { SidebarItem } from './SidebarItem';
+import { util } from '../../../utils';
+import './styles.css';
 
 const sidebarItems = [
     {
@@ -66,109 +66,109 @@ const sidebarItems = [
         ),
         scrollTarget: '.contact',
     },
-]
+];
 
 export class Sidebar extends PureComponent {
     state = {
         sidebarFixed: false,
         sidebarItemIndex: 0,
-    }
+    };
 
-    _onClick = selector => () => {
-        const el = document.querySelector(selector)
-        const pos = util.getOffset(el)
+    _onClick = (selector) => () => {
+        const el = document.querySelector(selector);
+        const pos = util.getOffset(el);
         window.scrollTo({
             top: pos.top + 20,
             behavior: 'smooth',
-        })
-    }
+        });
+    };
 
     _onScroll = () => {
-        const landing = document.querySelector('.landing-wrapper')
-        const about = document.querySelector('.about')
-        const projects = document.querySelector('.projects')
-        const contact = document.querySelector('.contact')
+        const landing = document.querySelector('.landing-wrapper');
+        const about = document.querySelector('.about');
+        const projects = document.querySelector('.projects');
+        const contact = document.querySelector('.contact');
 
-        const landingPos = landing.getBoundingClientRect()
-        const aboutPos = about.getBoundingClientRect()
-        const projectsPos = projects.getBoundingClientRect()
-        const contactPos = contact.getBoundingClientRect()
+        const landingPos = landing.getBoundingClientRect();
+        const aboutPos = about.getBoundingClientRect();
+        const projectsPos = projects.getBoundingClientRect();
+        const contactPos = contact.getBoundingClientRect();
 
         if (landingPos.top <= -window.innerHeight * 1.1) {
-            this.setState({ sidebarFixed: true })
+            this.setState({ sidebarFixed: true });
         } else {
-            this.setState({ sidebarFixed: false })
+            this.setState({ sidebarFixed: false });
         }
 
         if (contactPos.top <= window.innerHeight / 3) {
-            this.setState({ sidebarItemIndex: 3 })
+            this.setState({ sidebarItemIndex: 3 });
         } else if (projectsPos.top <= window.innerHeight / 3) {
-            this.setState({ sidebarItemIndex: 2 })
+            this.setState({ sidebarItemIndex: 2 });
         } else if (aboutPos.top <= window.innerHeight / 3) {
-            this.setState({ sidebarItemIndex: 1 })
+            this.setState({ sidebarItemIndex: 1 });
         } else if (landingPos.top <= -window.innerHeight * 0.25) {
-            this.setState({ sidebarItemIndex: 0 })
+            this.setState({ sidebarItemIndex: 0 });
         }
-    }
+    };
 
     componentDidMount() {
-        const landing = document.querySelector('.landing-wrapper')
-        const about = document.querySelector('.about')
-        const projects = document.querySelector('.projects')
-        const contact = document.querySelector('.contact')
+        const landing = document.querySelector('.landing-wrapper');
+        const about = document.querySelector('.about');
+        const projects = document.querySelector('.projects');
+        const contact = document.querySelector('.contact');
 
-        const landingPos = landing.getBoundingClientRect()
-        const aboutPos = about.getBoundingClientRect()
-        const projectsPos = projects.getBoundingClientRect()
-        const contactPos = contact.getBoundingClientRect()
+        const landingPos = landing.getBoundingClientRect();
+        const aboutPos = about.getBoundingClientRect();
+        const projectsPos = projects.getBoundingClientRect();
+        const contactPos = contact.getBoundingClientRect();
 
         if (contactPos.top <= window.innerHeight / 3) {
-            this.setState({ sidebarItemIndex: 3 })
+            this.setState({ sidebarItemIndex: 3 });
         } else if (projectsPos.top <= window.innerHeight / 3) {
-            this.setState({ sidebarItemIndex: 2 })
+            this.setState({ sidebarItemIndex: 2 });
         } else if (aboutPos.top <= window.innerHeight / 3) {
-            this.setState({ sidebarItemIndex: 1 })
+            this.setState({ sidebarItemIndex: 1 });
         } else if (landingPos.top <= -window.innerHeight * 0.25) {
-            this.setState({ sidebarItemIndex: 0 })
+            this.setState({ sidebarItemIndex: 0 });
         }
 
         window.addEventListener(
             'scroll',
             util.throttle(() => {
-                const landingPos = landing.getBoundingClientRect()
-                const aboutPos = about.getBoundingClientRect()
-                const projectsPos = projects.getBoundingClientRect()
-                const contactPos = contact.getBoundingClientRect()
+                const landingPos = landing.getBoundingClientRect();
+                const aboutPos = about.getBoundingClientRect();
+                const projectsPos = projects.getBoundingClientRect();
+                const contactPos = contact.getBoundingClientRect();
 
                 if (landingPos.top <= -window.innerHeight * 1.1) {
-                    this.setState({ sidebarFixed: true })
+                    this.setState({ sidebarFixed: true });
                 } else {
-                    this.setState({ sidebarFixed: false })
+                    this.setState({ sidebarFixed: false });
                 }
 
                 if (contactPos.top <= window.innerHeight / 3) {
-                    this.setState({ sidebarItemIndex: 3 })
+                    this.setState({ sidebarItemIndex: 3 });
                 } else if (projectsPos.top <= window.innerHeight / 3) {
-                    this.setState({ sidebarItemIndex: 2 })
+                    this.setState({ sidebarItemIndex: 2 });
                 } else if (aboutPos.top <= window.innerHeight / 3) {
-                    this.setState({ sidebarItemIndex: 1 })
+                    this.setState({ sidebarItemIndex: 1 });
                 } else if (landingPos.top <= -window.innerHeight * 0.25) {
-                    this.setState({ sidebarItemIndex: 0 })
+                    this.setState({ sidebarItemIndex: 0 });
                 }
-            })
-        )
+            }),
+        );
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll')
+        window.removeEventListener('scroll');
     }
 
     render() {
-        const { sidebarFixed, sidebarItemIndex } = this.state
+        const { sidebarFixed, sidebarItemIndex } = this.state;
 
         return (
             <div className={sidebarFixed ? 'sidebar sidebar-fixed' : 'sidebar'}>
-                {sidebarItems.map(({ component, scrollTarget }, index) =>
+                {sidebarItems.map(({ component, scrollTarget }, index) => (
                     <SidebarItem
                         index={index}
                         key={index}
@@ -178,8 +178,8 @@ export class Sidebar extends PureComponent {
                     >
                         {component}
                     </SidebarItem>
-                )}
+                ))}
             </div>
-        )
+        );
     }
 }

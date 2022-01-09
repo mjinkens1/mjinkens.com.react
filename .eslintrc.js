@@ -4,12 +4,14 @@ module.exports = {
         browser: true,
         es6: true,
     },
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
+    parserOptions: {
+        requireConfigFile: false,
+    },
     extends: [
-        'airbnb',
         'plugin:react/recommended',
         'plugin:jest/recommended',
-        'plugin:jsx-a11y/recommended',
+        // 'plugin:jsx-a11y/recommended',
         'plugin:prettier/recommended',
     ],
     plugins: ['react'],
@@ -82,4 +84,4 @@ module.exports = {
             },
         },
     },
-}
+};

@@ -1,6 +1,6 @@
-import React, { Fragment, PureComponent } from 'react'
-import { Project } from './Project'
-import './styles.css'
+import React, { Fragment, PureComponent } from 'react';
+import { Project } from './Project';
+import './styles.css';
 
 const projects = [
     {
@@ -86,10 +86,10 @@ const projects = [
             <Fragment>
                 <p>
                     This app was built using React, Redux, and Redux Sagas, and is hosted on
-                    Google's Firebase. The app provides a secure login to allow authorized users the
-                    ability to manage the app&#39;s content including files, announcements,
+                    Google&#39;s Firebase. The app provides a secure login to allow authorized users
+                    the ability to manage the app&#39;s content including files, announcements,
                     assignments, and calendar items. On the backend, content and data is managed
-                    using Firebase's Cloud Functions, Firestore database, and storage buckets.
+                    using Firebase&#39;s Cloud Functions, Firestore database, and storage buckets.
                 </p>
                 <p>
                     All text-based content features a WYSIWYG editor allowing custom formatting, and
@@ -196,18 +196,14 @@ const projects = [
                     pathfinding algorithm and Depth First Search traversal, implemented in C++ and
                     exposed to JavaScript with the V8 engine&#39;s API, to analyze the directed
                     graph for arbitrage opportunities. If an arbitrage path is detected, the
-                    analysis program logs the path and deploys a sub-program to continually monitor
-                    the path.
+                    analysis program logs the path and deploys a child-program to continually
+                    monitor the path.
                 </p>
                 <p>
-                    The sub-program will execute trades on the network as long as the path remains
+                    The child-program will execute trades on the network as long as the path remains
                     profitable. The program is designed to automatically handle network connectivity
                     issues by timing out at certain points of the algorithm, and automatically
                     resuming operation.
-                </p>
-                <p>
-                    Feel free to contact me if you're interested in more details about this program,
-                    and I'd be happy to go over it.
                 </p>
             </Fragment>
         ),
@@ -233,7 +229,7 @@ const projects = [
         shortDescription: 'A React app for showcasing the React apps I have developed',
         title: 'mjinkens.com (Beware of Recursion)',
     },
-]
+];
 
 export class Projects extends PureComponent {
     render() {
@@ -255,7 +251,7 @@ export class Projects extends PureComponent {
                             title,
                             video,
                         },
-                        index
+                        index,
                     ) => (
                         <Project
                             index={index}
@@ -271,9 +267,9 @@ export class Projects extends PureComponent {
                             title={title}
                             video={video}
                         />
-                    )
+                    ),
                 )}
             </div>
-        )
+        );
     }
 }

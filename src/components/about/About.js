@@ -1,33 +1,33 @@
-import React, { PureComponent } from 'react'
-import { util } from '../../utils'
-import './styles.css'
+import React, { PureComponent } from 'react';
+import { util } from '../../utils';
+import './styles.css';
 
 export class About extends PureComponent {
     state = {
         hasEnteredView: false,
-    }
+    };
 
     componentDidMount() {
         window.addEventListener(
             'scroll',
             util.throttle(() => {
-                const { hasEnteredView } = this.state
-                const about = document.querySelector('.about')
-                const aboutPos = about.getBoundingClientRect()
+                const { hasEnteredView } = this.state;
+                const about = document.querySelector('.about');
+                const aboutPos = about.getBoundingClientRect();
 
                 if (aboutPos.top <= window.innerHeight / 3 && !hasEnteredView) {
-                    this.setState({ hasEnteredView: true })
+                    this.setState({ hasEnteredView: true });
                 }
-            })
-        )
+            }),
+        );
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll')
+        window.removeEventListener('scroll');
     }
 
     render() {
-        const { hasEnteredView } = this.state
+        const { hasEnteredView } = this.state;
 
         return (
             <div className="container about">
@@ -39,8 +39,10 @@ export class About extends PureComponent {
                         </div>
                         <h2>What I Do</h2>
                         <p>
-                            Hi, I&#39;m Matt.<br />
-                            <br />I&#39;m a full stack developer with a focus on the front end,
+                            Hi, I&#39;m Matt.
+                            <br />
+                            <br />
+                            I&#39;m a full stack developer with a focus on the front end,
                             specializing in React Native and React.js.
                         </p>
                         <p>
@@ -69,6 +71,6 @@ export class About extends PureComponent {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }

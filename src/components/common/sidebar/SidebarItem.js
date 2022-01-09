@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 export const SidebarItem = ({ children, index, onClick, scrollTarget, sidebarItemIndex }) => {
-  return (
-    <div
-      className={
+    return (
+        <div
+            className={
                 index === sidebarItemIndex ? 'sidebar-item sidebar-item-active' : 'sidebar-item'
             }
-      onClick={onClick(scrollTarget)}
+            onClick={onClick(scrollTarget)}
         >
-      {children}
-    </div>
-  )
-}
+            {children}
+        </div>
+    );
+};

@@ -1,40 +1,40 @@
-import React, { PureComponent } from 'react'
-import { util } from '../../utils'
-import './styles.css'
+import React, { PureComponent } from 'react';
+import { util } from '../../utils';
+import './styles.css';
 
 export class Project extends PureComponent {
     state = {
         showInfo: false,
         visible: false,
-    }
+    };
 
-    _getMobilePhotoOrientation = reverse => {
-        const { mobileImageLandscape } = this.props
+    _getMobilePhotoOrientation = () => {
+        const { mobileImageLandscape } = this.props;
 
-        return mobileImageLandscape ? 'mobile-2' : 'mobile-1'
-    }
+        return mobileImageLandscape ? 'mobile-2' : 'mobile-1';
+    };
 
-    _onInfoButtonClick = () => this.setState(({ showInfo }) => ({ showInfo: !showInfo }))
+    _onInfoButtonClick = () => this.setState(({ showInfo }) => ({ showInfo: !showInfo }));
 
     componentDidMount() {
-        const { index } = this.props
-        const { visible } = this.state
-        const el = document.querySelector(`#project-${index}`)
+        const { index } = this.props;
+        const { visible } = this.state;
+        const el = document.querySelector(`#project-${index}`);
 
         window.addEventListener(
             'scroll',
             util.throttle(() => {
-                const pos = el.getBoundingClientRect()
+                const pos = el.getBoundingClientRect();
 
                 if (pos.top <= window.innerHeight / 1.25 && !visible) {
-                    this.setState({ visible: true })
+                    this.setState({ visible: true });
                 }
-            })
-        )
+            }),
+        );
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll')
+        window.removeEventListener('scroll');
     }
 
     render() {
@@ -49,10 +49,10 @@ export class Project extends PureComponent {
             shortDescription,
             title,
             video,
-        } = this.props
-        const { showInfo, visible } = this.state
+        } = this.props;
+        const { showInfo, visible } = this.state;
 
-        console.log('VIDEO', video)
+        console.log('VIDEO', video);
 
         return index % 2 === 0 ? (
             <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
@@ -180,6 +180,6 @@ export class Project extends PureComponent {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }

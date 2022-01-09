@@ -1,0 +1,146 @@
+// n is number of stars required
+@function multiple-box-shadow($n) {
+    $value: '#{random(2000)}px #{random(2000)}px #623cd8';
+
+    @for $i from 2 through $n {
+        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #623cd8';
+    }
+
+    @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+#stars {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: $shadows-small;
+    animation: animStar 150s linear infinite;
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: -908px;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: $shadows-small;
+    }
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: $shadows-small;
+    }
+}
+
+#stars2 {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    animation: animStar 100s linear infinite;
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: -908px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: $shadows-medium;
+    }
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: $shadows-medium;
+    }
+}
+
+#stars3 {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: $shadows-big;
+    animation: animStar 50s linear infinite;
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: -908px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: $shadows-big;
+    }
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: $shadows-big;
+    }
+}
+
+#starship {
+    display: none;
+    position: absolute;
+    bottom: 0; //-60px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    animation-delay: 5s;
+    animation: animStarship 10s linear infinite;
+
+    @media (min-width: 1080px) {
+        display: block;
+    }
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(908px);
+    }
+}
+
+@keyframes animStarship {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-968px);
+    }
+
+    100% {
+        transform: translateY(-968px);
+    }
+}
