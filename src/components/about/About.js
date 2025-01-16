@@ -34,9 +34,9 @@ export class About extends PureComponent {
                 <h1>ABOUT</h1>
                 <div className="info">
                     <div className={hasEnteredView ? 'info-p translate0' : 'info-p'}>
-                        <div className="info-img">
-                            <img src="/images/me1.png" alt="me" />
-                        </div>
+                        {/* <div className="info-img">
+                            <img src="/images/self.png" alt="me" />
+                        </div> */}
                         <h2>What I Do</h2>
                         <p>
                             Hi, I&#39;m Matt.

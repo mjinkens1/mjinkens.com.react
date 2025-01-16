@@ -76,34 +76,34 @@ const projects = [
         title: 'react-transformable-draggable',
         video: '/videos/rtd-video.mov',
     },
-    {
-        imageDesktop: '/images/class-site.png',
-        imageDesktopAlt: 'djinkens.org',
-        imageMobile: '/images/class-site-mobile.png',
-        imageMobileAlt: 'djinkens.org mobile',
-        linkAddress: 'https://djinkens.org',
-        longDescription: (
-            <Fragment>
-                <p>
-                    This app was built using React, Redux, and Redux Sagas, and is hosted on
-                    Google&#39;s Firebase. The app provides a secure login to allow authorized users
-                    the ability to manage the app&#39;s content including files, announcements,
-                    assignments, and calendar items. On the backend, content and data is managed
-                    using Firebase&#39;s Cloud Functions, Firestore database, and storage buckets.
-                </p>
-                <p>
-                    All text-based content features a WYSIWYG editor allowing custom formatting, and
-                    embedded images and video. The app also features a daily news video from CNN10,
-                    which is accessed through the CNN.com RSS feed and embedded into the page.
-                </p>
-            </Fragment>
-        ),
-        mobileImageLandscape: false,
-        reverse: false,
-        shortDescription:
-            'A homepage for students to keep up to date with course materials and important events',
-        title: 'djinkens.org',
-    },
+    // {
+    //     imageDesktop: '/images/class-site.png',
+    //     imageDesktopAlt: 'djinkens.org',
+    //     imageMobile: '/images/class-site-mobile.png',
+    //     imageMobileAlt: 'djinkens.org mobile',
+    //     linkAddress: 'https://djinkens.org',
+    //     longDescription: (
+    //         <Fragment>
+    //             <p>
+    //                 This app was built using React, Redux, and Redux Sagas, and is hosted on
+    //                 Google&#39;s Firebase. The app provides a secure login to allow authorized users
+    //                 the ability to manage the app&#39;s content including files, announcements,
+    //                 assignments, and calendar items. On the backend, content and data is managed
+    //                 using Firebase&#39;s Cloud Functions, Firestore database, and storage buckets.
+    //             </p>
+    //             <p>
+    //                 All text-based content features a WYSIWYG editor allowing custom formatting, and
+    //                 embedded images and video. The app also features a daily news video from CNN10,
+    //                 which is accessed through the CNN.com RSS feed and embedded into the page.
+    //             </p>
+    //         </Fragment>
+    //     ),
+    //     mobileImageLandscape: false,
+    //     reverse: false,
+    //     shortDescription:
+    //         'A homepage for students to keep up to date with course materials and important events',
+    //     title: 'djinkens.org',
+    // },
     {
         imageDesktop: '/images/rncl.png',
         imageDesktopAlt: 'React Native Circle List',
@@ -212,6 +212,17 @@ const projects = [
             networks for arbitrage opportunities and automatically execute
             trades`,
         title: 'Crytpocurrency Arbitrage',
+    },
+    {
+        imageDesktop: '/images/chart.png',
+        imageDesktopAlt: 'crypto',
+        imageMobile: null,
+        imageMobileAlt: null,
+        linkAddress: null,
+        longDescription: null,
+        mobileImageLandscape: false,
+        shortDescription: `A program implemented in Python to analyze and classify digital asset exchange data in order to extract patterns and indicators of future price direction and market sentiment.`,
+        title: 'AI Crytpocurrency Market Analysis',
     },
     {
         imageDesktop: '/images/mjinkens.png',

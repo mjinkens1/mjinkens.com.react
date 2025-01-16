@@ -52,8 +52,6 @@ export class Project extends PureComponent {
         } = this.props;
         const { showInfo, visible } = this.state;
 
-        console.log('VIDEO', video);
-
         return index % 2 === 0 ? (
             <div className={visible ? 'project translate0' : 'project'} id={`project-${index}`}>
                 <div className={showInfo ? 'project-info project-p-show' : 'project-info'}>
