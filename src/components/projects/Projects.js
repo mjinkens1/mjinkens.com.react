@@ -219,10 +219,15 @@ const projects = [
         imageMobile: null,
         imageMobileAlt: null,
         linkAddress: null,
-        longDescription: null,
+        longDescription: (
+            <p>
+                This program was written in Python and is deployed on AWS. It evaluates multiple
+                trading strategies simultaneously to look for and execute profitable trades.
+            </p>
+        ),
         mobileImageLandscape: false,
         shortDescription: `A program implemented in Python to analyze and classify digital asset exchange data in order to extract patterns and indicators of future price direction and market sentiment.`,
-        title: 'AI Crytpocurrency Market Analysis',
+        title: 'Crytpocurrency Market Analysis',
     },
     {
         imageDesktop: '/images/mjinkens.png',
